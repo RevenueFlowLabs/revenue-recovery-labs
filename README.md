@@ -37,6 +37,7 @@ npm start
 ## Project Structure
 
 - `pages/` – Next.js pages.
+- `src/pages/` – additional TypeScript pages for dashboard, settings, billing (dark UI with Tailwind + icons).
 - `components/` – Reusable React components (includes `LandingPage.jsx`).
 - `styles/` – Tailwind CSS configuration and global styles.
 - `.env` – environment configuration (ignored by git).
