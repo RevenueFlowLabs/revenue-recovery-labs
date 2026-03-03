@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Settings, User } from 'lucide-react';
+import { supabase } from '../lib/supabaseClient';
+import { useRouter } from 'next/router';
 
 export default function SettingsPage() {
+  const router = useRouter();
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) router.replace('/');
+    });
+  }, [router]);
+
   return (
     <div className="min-h-screen bg-[#050505] text-white p-6">
       <header className="flex items-center gap-2 mb-8">

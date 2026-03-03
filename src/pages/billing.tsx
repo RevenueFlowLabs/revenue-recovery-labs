@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CreditCard, DollarSign } from 'lucide-react';
 import { supabase } from '../lib/supabaseClient';
+import { useRouter } from 'next/router';
 
 interface Payment {
   id: string;
@@ -15,7 +16,15 @@ export default function Billing() {
   const [usage, setUsage] = useState(0);
   const [loading, setLoading] = useState(true);
 
+  const router = useRouter();
+
   useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) {
+        router.replace('/');
+      }
+    });
+
     async function loadData() {
       setLoading(true);
 
@@ -38,7 +47,7 @@ export default function Billing() {
       setLoading(false);
     }
     loadData();
-  }, []);
+  }, [router]);
 
   const handleManage = async () => {
     const res = await fetch('/api/manage-subscription', { method: 'POST' });

@@ -38,6 +38,7 @@ npm start
 
 - `pages/` – Next.js pages.
 - `src/pages/` – additional TypeScript pages for dashboard, settings, billing (dark UI with Tailwind + icons).
+  • authentication-protected via Supabase Auth; unauthorized users are redirected to landing page.
 - `components/` – Reusable React components (includes `LandingPage.jsx`).
 - `styles/` – Tailwind CSS configuration and global styles.
 - `.env` – environment configuration (ignored by git).

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Home, BarChart2, Settings, Zap, CreditCard } from 'lucide-react';
 import { supabase } from '../lib/supabaseClient';
+import { useRouter } from 'next/router';
 
 interface Payment {
   id: string;
@@ -14,7 +15,16 @@ export default function Dashboard() {
   const [payments, setPayments] = useState<Payment[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const router = useRouter();
+
   useEffect(() => {
+    // redirect if not authenticated (client-side fallback)
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) {
+        router.replace('/');
+      }
+    });
+
     async function loadPayments() {
       setLoading(true);
       const { data, error } = await supabase
@@ -32,7 +42,7 @@ export default function Dashboard() {
     }
 
     loadPayments();
-  }, []);
+  }, [router]);
 
   const totalRecovered = payments
     .filter((p) => p.status === 'recovered')
