@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 
-export default function Home() {
+export default function Login() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-white shadow-md">
@@ -30,10 +30,10 @@ export default function Home() {
       <main className="flex-grow container mx-auto px-6 py-12">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Welcome to Our Professional Landing Page
+            Client Login
           </h1>
           <p className="text-gray-600 text-lg">
-            This is a sample landing page built with Next.js and Tailwind CSS.
+            Your login form.
           </p>
         </div>
       </main>
@@ -49,7 +49,7 @@ export default function Home() {
               <Link href="/signup" className="hover:text-gray-300">Signup</Link>
               <Link href="/admin" className="hover:text-gray-300">Admin Login</Link>
               <Link href="/dashboard" className="hover:text-gray-300">Dashboard</Link>
-              <Link href="/billing" className="hover:text-gray-300">Payment</Link>
+              <Link href="/billing" className="hover:text-ray-300">Payment</Link>
             </div>
           </div>
         </div>
