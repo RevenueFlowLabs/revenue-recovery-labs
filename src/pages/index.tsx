@@ -1,4 +1,4 @@
-import RevenueRecovery from '../components/LandingPage';
+import RevenueRecovery from '../../components/LandingPage';
 
 export default function Home() {
   return <RevenueRecovery />;

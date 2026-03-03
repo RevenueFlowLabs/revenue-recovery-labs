@@ -37,7 +37,7 @@ npm start
 ## Project Structure
 
 - `pages/` – Next.js pages.
-- `src/pages/` – additional TypeScript pages for dashboard, settings, billing (dark UI with Tailwind + icons).
+- `src/pages/` – all page files now reside here (dashboard, settings, billing, landing, _app, APIs). Routes are lowercase and protected via auth.
   • authentication-protected via Supabase Auth; unauthorized users are redirected to landing page.
 - `components/` – Reusable React components (includes `LandingPage.jsx`).
 - `styles/` – Tailwind CSS configuration and global styles.
