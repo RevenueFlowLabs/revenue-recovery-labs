@@ -1,5 +1,4 @@
-
-import { ArrowRight, Zap, Shield, Check } from "lucide-react";
+import { ArrowRight, Zap, Shield, BarChart3, ChevronRight } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -18,9 +17,7 @@ export default function LandingPage() {
           </div>
           <div className="md:hidden">
             <button className="text-gray-600 hover:text-gray-800 focus:outline-none">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
+              <ChevronRight className="h-6 w-6" />
             </button>
           </div>
         </nav>
@@ -75,7 +72,7 @@ export default function LandingPage() {
               <div className="w-full md:w-1/3 px-4 mb-8">
                 <div className="bg-white p-8 rounded-lg shadow-md">
                   <div className="flex items-center justify-center h-16 w-16 bg-blue-500 text-white rounded-full mb-4">
-                    <Check className="h-8 w-8" />
+                    <BarChart3 className="h-8 w-8" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Proven Results</h3>
                   <p className="text-gray-600">
