@@ -1,48 +1,106 @@
-import React from 'react';
-import { Activity, ArrowRight, Shield, Zap, Check } from 'lucide-react';
 
-export default function RevenueRecovery() {
+import { ArrowRight, Zap, Shield, Check } from "lucide-react";
+
+export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white">
-      <nav className="flex justify-between items-center p-6 max-w-7xl mx-auto">
-        <div className="flex items-center gap-2">
-          <Activity className="text-blue-500 w-8 h-8" />
-          <span className="text-2xl font-bold">Revenue Recovery Labs</span>
-        </div>
-        <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full font-medium transition">
-          Sign In
-        </button>
-      </nav>
+    <div className="flex flex-col min-h-screen">
+      <header className="bg-white shadow-md">
+        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="text-xl font-bold text-gray-800">
+            <a href="/">MyApp</a>
+          </div>
+          <div className="hidden md:flex items-center space-x-6">
+            <a href="/about" className="text-gray-600 hover:text-gray-800">About</a>
+            <a href="/contact" className="text-gray-600 hover:text-gray-800">Contact</a>
+            <a href="/login" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+              Client Login
+            </a>
+          </div>
+          <div className="md:hidden">
+            <button className="text-gray-600 hover:text-gray-800 focus:outline-none">
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
 
-      <main className="max-w-5xl mx-auto text-center pt-20 px-4">
-        <h1 className="text-6xl font-extrabold mb-6 leading-tight bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent">
-          Recover failed payments <br /> on autopilot.
-        </h1>
-        <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto">
-          AI-powered recovery messages sent via SMS and Email the moment a payment fails.
-        </p>
-        <button className="bg-white text-black px-10 py-4 rounded-full font-bold text-lg flex items-center gap-2 mx-auto hover:bg-gray-200">
-          Start Recovering <ArrowRight size={20} />
-        </button>
+      <main className="flex-grow">
+        <section className="bg-white py-20">
+          <div className="container mx-auto px-6 text-center">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+              Recover Lost Revenue with Our Expertise
+            </h1>
+            <p className="text-gray-600 text-lg mb-8">
+              We help businesses like yours recover revenue that has been lost due to billing errors, chargebacks, and other issues.
+            </p>
+            <a href="/signup" className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600">
+              Get Started <ArrowRight className="inline-block w-5 h-5 ml-2" />
+            </a>
+          </div>
+        </section>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-24">
-          <div className="p-8 bg-[#0A0A0A] border border-gray-900 rounded-2xl text-left">
-            <Zap className="text-yellow-500 mb-4" />
-            <h3 className="font-bold text-lg">Instant Dunning</h3>
-            <p className="text-gray-500 text-sm">Automated retries and alerts for failed charges.</p>
+        <section className="bg-gray-100 py-20">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-800">Why Choose Us?</h2>
+              <p className="text-gray-600 mt-2">
+                Our team of experts has a proven track record of success in recovering lost revenue for our clients.
+              </p>
+            </div>
+            <div className="flex flex-wrap -mx-4">
+              <div className="w-full md:w-1/3 px-4 mb-8">
+                <div className="bg-white p-8 rounded-lg shadow-md">
+                  <div className="flex items-center justify-center h-16 w-16 bg-blue-500 text-white rounded-full mb-4">
+                    <Zap className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Fast and Efficient</h3>
+                  <p className="text-gray-600">
+                    We work quickly to identify and recover your lost revenue, so you can get back to focusing on your business.
+                  </p>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 px-4 mb-8">
+                <div className="bg-white p-8 rounded-lg shadow-md">
+                  <div className="flex items-center justify-center h-16 w-16 bg-blue-500 text-white rounded-full mb-4">
+                    <Shield className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Secure and Compliant</h3>
+                  <p className="text-gray-600">
+                    We take data security and compliance seriously, and we are fully compliant with all relevant regulations.
+                  </p>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 px-4 mb-8">
+                <div className="bg-white p-8 rounded-lg shadow-md">
+                  <div className="flex items-center justify-center h-16 w-16 bg-blue-500 text-white rounded-full mb-4">
+                    <Check className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Proven Results</h3>
+                  <p className="text-gray-600">
+                    We have a proven track record of success, with an average recovery rate of over 90% for our clients.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="p-8 bg-[#0A0A0A] border border-gray-900 rounded-2xl text-left">
-            <Shield className="text-blue-500 mb-4" />
-            <h3 className="font-bold text-lg">Secure Integration</h3>
-            <p className="text-gray-500 text-sm">Seamlessly connects to your Supabase backend.</p>
-          </div>
-          <div className="p-8 bg-[#0A0A0A] border border-gray-900 rounded-2xl text-left">
-            <Check className="text-green-500 mb-4" />
-            <h3 className="font-bold text-lg">High ROI</h3>
-            <p className="text-gray-500 text-sm">Recover lost revenue with minimal effort.</p>
-          </div>
-        </div>
+        </section>
       </main>
+
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="container mx-auto px-6">
+          <div className="flex justify-between items-center">
+            <div>
+              <p>&copy; 2023 MyApp. All rights reserved.</p>
+            </div>
+            <div className="flex space-x-6">
+              <a href="/privacy" className="hover:text-gray-300">Privacy Policy</a>
+              <a href="/terms" className="hover:text-gray-300">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
