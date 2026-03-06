@@ -1,5 +1,5 @@
-
 import Link from 'next/link';
+import Footer from '../components/layout/Footer';
 
 export default function Contact() {
   return (
@@ -38,22 +38,7 @@ export default function Contact() {
         </div>
       </main>
 
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <h3 className="text-lg font-bold">MyApp</h3>
-              <p className="text-sm text-gray-400">© 2024. All Rights Reserved.</p>
-            </div>
-            <div className="flex space-x-6">
-              <Link href="/signup" className="hover:text-gray-300">Signup</Link>
-              <Link href="/admin" className="hover:text-gray-300">Admin Login</Link>
-              <Link href="/dashboard" className="hover:text-gray-300">Dashboard</Link>
-              <Link href="/billing" className="hover:text-gray-300">Payment</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
